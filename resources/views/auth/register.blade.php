@@ -16,7 +16,8 @@
                 <h1 class="text-xl font-bold leading-tight tracking-tight text-gray-900 md:text-2xl dark:text-white">Create an
                     account
                 </h1>
-                <form class="space-y-4 md:space-y-6">
+                <form class="space-y-4 md:space-y-6" method="POST" action="{{ route('register') }}" novalidate>
+                    @csrf
                     <div>
                         <label for="username" class="block mb-2 text-sm font-medium text-gray-900 dark:text-white">
                             Username
@@ -53,10 +54,9 @@
                     </div>
 
                     <a href="{{ route('dashboard') }}">
-                        {{--TODO: Change tag p to button--}}
-                        <p class="w-full mt-4 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-700 dark:hover:bg-red-800 dark:focus:ring-red-900">
+                        <button type="submit" class="w-full mt-4 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-700 dark:hover:bg-red-800 dark:focus:ring-red-900">
                             Create an account
-                        </p>
+                        </button>
                     </a>
 
                     <p class="text-sm font-light text-gray-500 dark:text-gray-400">
