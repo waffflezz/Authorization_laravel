@@ -24,11 +24,13 @@ class LoginController extends Controller
             'password' => ['required', 'string']
         ]);
 
-        if (!Auth::attempt($credentials)) {
+        if (!Auth::attempt($credentials, $request->boolean('remember'))) {
             throw ValidationException::withMessages([
                 'email' => 'These credentials do not match our records'
             ]);
         }
+
+        $request->session()->regenerate();
 
         return redirect()->intended('dashboard');
     }
