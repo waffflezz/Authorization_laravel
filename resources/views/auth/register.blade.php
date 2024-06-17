@@ -60,13 +60,6 @@
                         @enderror
                     </div>
 
-                    <div class="flex items-center">
-                        <input id="remember" name="remember" type="checkbox" class="w-4 h-4 text-blue-600 bg-gray-100 border-gray-300 rounded focus:ring-blue-500 dark:focus:ring-blue-600 dark:ring-offset-gray-800 dark:bg-gray-700 dark:border-gray-600">
-                        <label for="remember" class="ml-2 text-sm font-medium text-gray-900 dark:text-gray-300">
-                            Remember me
-                        </label>
-                    </div>
-
                     <a href="{{ route('dashboard') }}">
                         <button type="submit" class="w-full mt-4 text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-red-700 dark:hover:bg-red-800 dark:focus:ring-red-900">
                             Create an account

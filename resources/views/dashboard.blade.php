@@ -2,11 +2,14 @@
 
 @section('register_buttons')
     <div class="flex justify-end gap-2">
-        <a href="{{ route('welcome') }}">
-            <button class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-gray-700 dark:hover:bg-gray-800 dark:focus:ring-gray-900">
-                Log Out
-            </button>
-        </a>
+        <form action="{{ route('logout') }}" method="POST">
+            @csrf
+            <a href="{{ route('logout') }}" onclick="event.preventDefault(); this.closest('form').submit();">
+                <button class="text-white bg-blue-600 hover:bg-blue-700 focus:ring-4 focus:outline-none focus:ring-blue-300 font-medium rounded-lg text-sm px-5 py-2.5 text-center dark:bg-gray-700 dark:hover:bg-gray-800 dark:focus:ring-gray-900">
+                    Log Out
+                </button>
+            </a>
+        </form>
     </div>
 @endsection
 
